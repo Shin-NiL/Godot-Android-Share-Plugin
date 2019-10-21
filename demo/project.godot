@@ -19,7 +19,7 @@ modules="org/godotengine/godot/GodotShare"
 
 [application]
 
-config/name="GodotShare Demo"
+config/name="GodotShare Plugin Demo"
 run/main_scene="res://main.tscn"
 config/icon="res://icon.png"
 
