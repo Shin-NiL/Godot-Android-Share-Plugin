@@ -21,6 +21,24 @@ org/godotengine/godot/GodotShare
 ```
 \* If you're using more than one module separate them by comma.
 
+- An important note is that the image you want to share must be saved on the ```"user://"``` virtual directory root to be accessible, you can use ```OS.get_user_data_dir()``` to get its absolute path (required by ```sharePic```). In the demo directory you'll find a working sample project where a screen capture is shared.
+
+
+Donations
+---------
+Was this project useful for you? Wanna make a donation? These are the options:
+
+### Paypal
+
+My [Paypal donation link](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=3MJE3M4FMJYGN&lc=BR&item_name=Shin%2dNiL%27s%20Github&item_number=Github&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)
+
+### Brave browser
+
+If you don't have any money, but still willing to help me you can install [Brave browser](https://brave.com/) using my [referral link](https://brave.com/shi012	). 
+If you do so and keep using the browser, I'll receive some reward.
+
+If you're already a Brave user, please consider donating some BATs ;) 
+
 
 API Reference
 -------------
@@ -40,10 +58,4 @@ shareText(title, subject, text)
 # @param String text
 void sharePic(image_abs_path, title, subject, text)
 ```
-
-Usage
--------------
-An important note is that the image you want to share must be saved on the ```"user://"``` virtual directory root to be accessible, you can use ```OS.get_user_data_dir()``` to get its absolute path (required by ```sharePic```).
-
-In the demo directory you'll find a working sample project where a screen capture is shared.
 
