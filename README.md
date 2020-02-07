@@ -12,8 +12,8 @@ How to use
 ----------
 
 - Configure, install  and enable the "Android Custom Template" for your project, just follow the [official documentation](https://docs.godotengine.org/en/latest/getting_started/workflow/export/android_custom_build.html);
-- download or clone this repository;
-- drop the ```share-plugin``` directory (from this repository) inside the ```res://android/``` directory on your Godot project.		
+- go to the [releases tab](https://github.com/Shin-NiL/Godot-Android-Share-Plugin/releases), choose a version and download the respective zip package;
+- drop the ```share-plugin``` directory (from the zip package) inside the ```res://android/``` directory on your Godot project.		
 - on the Project Settings -> Android -> Modules, add the string:
 
 ```
