@@ -12,14 +12,18 @@ How to use
 ----------
 
 - Configure, install  and enable the "Android Custom Template" for your project, just follow the [official documentation](https://docs.godotengine.org/en/latest/getting_started/workflow/export/android_custom_build.html);
-- go to the [releases tab](https://github.com/Shin-NiL/Godot-Android-Share-Plugin/releases), choose a version and download the respective zip package;
-- drop the ```share-plugin``` directory (from the zip package) inside the ```res://android/``` directory on your Godot project.		
-- on the Project Settings -> Android -> Modules, add the string:
+- go to the [releases tab](https://github.com/Shin-NiL/Godot-Android-Share-Plugin/releases), choose a version and download the respective plugin zip package;
+- extract the plugin zip content (GodotShare.release.aar and GodotShare.gad files) inside the ```res://android/plugins``` directory on your Godot project;
+- edit the file ```res//android/build/gradle.properties``` addind the following lines at the end:
+```
+android.useAndroidX=true
+android.enableJetifier=true
+```
+- on the Project -> Export -> Options, turn on the "Use Custom Build" and insert the name "GodotShare" on the "Plugins" field;
 
-```
-org/godotengine/godot/GodotShare
-```
-\* If you're using more than one module separate them by comma.
+![Export options](/media/export.png "Export options")
+
+\* If you're using more than one plugin separate their names by comma.
 
 - An important note is that the image you want to share must be saved on the ```"user://"``` virtual directory root to be accessible, you can use ```OS.get_user_data_dir()``` to get its absolute path (required by ```sharePic```). In the demo directory you'll find a working sample project where a screen capture is shared.
 
