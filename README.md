@@ -13,7 +13,7 @@ How to use
 
 - Configure, install  and enable the "Android Custom Template" for your project, just follow the [official documentation](https://docs.godotengine.org/en/latest/getting_started/workflow/export/android_custom_build.html);
 - go to the [releases tab](https://github.com/Shin-NiL/Godot-Android-Share-Plugin/releases), choose a version and download the respective GodotShare.zip package;
-- extract the plugin GodotShare.zip content (GodotShare.release.aar and GodotShare.gad files) inside the ```res://android/plugins``` directory on your Godot project;
+- extract the GodotShare.zip content (GodotShare.release.aar and GodotShare.gad files) inside the ```res://android/plugins``` directory on your Godot project;
 - edit the file ```res//android/build/gradle.properties``` adding the following lines at the end:
 ```
 android.useAndroidX=true
