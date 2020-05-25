@@ -1,0 +1,3 @@
+rootProject.name='GodotShare'
+include ':app', ':godot-lib.release'
+include ':godotshare'
