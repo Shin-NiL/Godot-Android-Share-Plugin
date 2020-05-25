@@ -1,0 +1,5 @@
+[config]
+
+name="GodotShare"
+binary_type="local"
+binary="GodotShare.aar"
