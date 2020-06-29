@@ -2,4 +2,4 @@
 
 name="GodotShare"
 binary_type="local"
-binary="GodotShare.aar"
+binary="GodotShare.release.aar"
