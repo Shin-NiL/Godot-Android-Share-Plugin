@@ -8,6 +8,7 @@ import android.util.Log;
 
 import org.godotengine.godot.Godot;
 import org.godotengine.godot.plugin.GodotPlugin;
+import org.godotengine.godot.plugin.UsedByGodot;
 
 import java.io.File;
 import java.util.Arrays;
@@ -21,9 +22,10 @@ public class GodotShare extends GodotPlugin {
 
     public GodotShare(Godot godot) {
         super(godot);
-        activity = godot;
+        activity = godot.getActivity();
     }
 
+    @UsedByGodot
     public void shareText(String title, String subject, String text) {
         Log.d(TAG, "shareText called");
         Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
@@ -33,6 +35,7 @@ public class GodotShare extends GodotPlugin {
         activity.startActivity(Intent.createChooser(sharingIntent, title));
     }
 
+    @UsedByGodot
     public void sharePic(String path, String title, String subject, String text) {
         Log.d(TAG, "sharePic called");
 
@@ -59,11 +62,5 @@ public class GodotShare extends GodotPlugin {
     @Override
     public String getPluginName() {
         return "GodotShare";
-    }
-
-    @NonNull
-    @Override
-    public List<String> getPluginMethods() {
-        return Arrays.asList("sharePic", "shareText");
     }
 }
