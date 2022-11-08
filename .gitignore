@@ -3,5 +3,6 @@
 *.import
 .import
 *.o
+.idea/
 demo/android
 tools/releases
