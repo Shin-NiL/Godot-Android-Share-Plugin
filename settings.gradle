@@ -1,0 +1,2 @@
+include ':godot-android-share'
+rootProject.name = "Godot Android Share"

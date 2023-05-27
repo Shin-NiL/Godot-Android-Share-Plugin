@@ -1,0 +1,8 @@
+[config]
+
+name="GodotAndroidShare"
+binary_type="local"
+binary="GodotAndroidShare.2.0.0-rc.1.release.aar"
+
+[dependencies]
+remote=["com.android.billingclient:billing:6.0.0"]
