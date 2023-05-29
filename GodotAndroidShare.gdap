@@ -1,0 +1,6 @@
+[config]
+
+name="GodotAndroidShare"
+binary_type="local"
+binary="GodotAndroidShare.4.0.0.release.aar"
+

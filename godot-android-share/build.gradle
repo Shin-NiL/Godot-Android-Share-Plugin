@@ -1,0 +1,33 @@
+plugins {
+    id 'com.android.library'
+}
+
+ext.pluginVersionCode = 5
+ext.pluginVersionName = "4.0.0"
+
+android {
+    compileSdkVersion 33
+    buildToolsVersion "33.0.0"
+
+    defaultConfig {
+        minSdkVersion 18
+        targetSdkVersion 33
+        versionCode pluginVersionCode
+        versionName pluginVersionName
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_9
+        targetCompatibility JavaVersion.VERSION_1_9
+    }
+
+    libraryVariants.all { variant ->
+        variant.outputs.all { output ->
+            output.outputFileName = "GodotAndroidShare.$pluginVersionName.${variant.name}.aar"
+        }
+    }
+}
+
+dependencies {
+    implementation "androidx.legacy:legacy-support-v4:1.0.0"
+    compileOnly fileTree(dir: 'libs', include: ['godot-lib*.aar'])
+}
